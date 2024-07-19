@@ -1,9 +1,18 @@
 import 'package:apparotech/res/constanta.dart';
 import 'package:apparotech/splash/splash_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp(
+   options: FirebaseOptions(
+       apiKey: "AIzaSyBgVG74fh8ty267rejsQpTTFiuoqYJCS_E",
+       appId: "1:831533825723:web:134ef691f726f03346f39e",
+       messagingSenderId:  "831533825723",
+       projectId: "apparootech")
+ );
   runApp(const MyApp());
 }
 

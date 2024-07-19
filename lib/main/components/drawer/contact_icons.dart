@@ -12,7 +12,7 @@ class ContactIcon extends StatelessWidget {
       child: Row(
         children: [
           const Spacer(),
-          IconButton(onPressed: () {launchUrl(Uri.parse('www.linkedin.com/in/apparotech-517745305'));}, icon: SvgPicture.asset('assets/images/iconlinkedin.svg')),
+          IconButton(onPressed: () {launchUrl(Uri.parse('https://www.linkedin.com/in/app-arotech-517745305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'));}, icon: SvgPicture.asset('assets/images/iconlinkedin.svg')),
           IconButton(onPressed: () {launchUrl(Uri.parse('https://github.com/apparotech'));}, icon: SvgPicture.asset('assets/images/icongithub.svg')),
           IconButton(onPressed: () {launchUrl(Uri.parse('https://www.facebook.com/profile.php?id=61559650213211'));}, icon: SvgPicture.asset('assets/images/facebook.svg')),
           IconButton(onPressed: () {launchUrl(Uri.parse('https://x.com/apparotech'));}, icon: SvgPicture.asset('assets/images/twitter.svg')),

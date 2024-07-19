@@ -1,5 +1,9 @@
+
+
+import 'package:apparotech/home/service.dart';
 import 'package:flutter/material.dart';
 
+import '../home/Aboutus.dart';
 import '../main/components/navigation_button.dart';
 import '../view model/controller.dart';
 import '../view model/responsive.dart';
@@ -14,10 +18,20 @@ class NavigationButtonList extends StatelessWidget {
         child: Row(
           children: [
             NavigationTextButton(onTap: () {controller.animateToPage(0, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'Home'),
-           // if(!Responsive.isLargeMobile(context)) NavigationTextButton(onTap: () {}, text: 'About us'),
-            NavigationTextButton(onTap: () {controller.animateToPage(1, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'Projects'),
-            NavigationTextButton(onTap: () {controller.animateToPage(2, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'Product'),
 
+           // NavigationTextButton(onTap: () {controller.animateToPage(1, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'Service'),
+            NavigationTextButton(onTap: () {controller.animateToPage(2, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'Project'),
+            //NavigationTextButton(onTap: () {controller.animateToPage(3, duration: const Duration(milliseconds: 500), curve: Curves.easeIn);}, text: 'About'),
+             NavigationTextButton(onTap: (){
+               Navigator.push(
+                 context, MaterialPageRoute(builder: (context) => AboutUsPage()),
+               );
+             }, text: 'About'),
+            NavigationTextButton(onTap: (){
+              Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Service()),
+              );
+            }, text: 'About'),
           ],
         ),
       );

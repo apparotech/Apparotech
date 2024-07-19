@@ -12,7 +12,7 @@ class ProjectLinks extends StatelessWidget {
         Row(
           children: [
             const Text('check on amazon store', style: TextStyle(color: Colors.white),overflow: TextOverflow.ellipsis),
-            IconButton(onPressed: () {launchUrl(Uri.parse(projectList[index].link));} , icon: SvgPicture.asset('assets/icons/github.svg')),
+            IconButton(onPressed: () {launchUrl(Uri.parse(projectList[index].link));} , icon: SvgPicture.asset('assets/images/amazonsvg.svg')),
           ],
         ),
         const Spacer(),
